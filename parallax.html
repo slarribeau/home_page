@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+   body {
+     font-family: Helvetica;
+   }
+   .parallax {
+     /* The image used */
+     background-image: url("abstract-business-code-270348.jpg");
+
+     /* Set a specific height */
+     min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index:0; 
+  }
+  #fixed_header { 
+     position: fixed; 
+     display:inline-block; 
+     width: 100%; 
+     background-color: black; 
+     color:white;
+     z-index:100;
+     font-size: 24px; 
+     font-family: proxima-nova;
+     font-family: helvetica;
+
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    letter-spacing: .15em;
+    line-height: 1em;
+    text-transform: uppercase;
+     -webkit-font-smoothing:antialiased;
+  }
+  .name {
+    float:left;
+    padding:10px;
+  }
+  .menu {
+    position:relative;
+    right:20px;
+    float:right;
+    padding:10px;
+  }
+  #fixed_header a {
+    color:white;
+    text-decoration:none;
+    margin:0 10px 0 0;
+  }
+  #intro { 
+     position: relative; 
+     width: 100%; 
+     height: 200px; 
+     background-color: grey; 
+     color:white;
+     border: solid 3px #9e70ba; 
+     font-size: 24px; 
+     text-align: center; 
+     z-index:0;
+   } 
+  .box_with_float { 
+     position: relative; 
+     width: 100%; 
+     height: 700px;  
+     background-color: grey; 
+     color:white;
+     border: solid 3px #9e70ba; 
+     font-size: 24px; 
+     text-align: center; 
+     z-index:0;
+   } 
+  .box { 
+     position: relative; 
+     width: 100%; 
+     background-color: grey; 
+     color:white;
+     border: solid 3px #9e70ba; 
+     font-size: 24px; 
+     text-align: center; 
+     z-index:0;
+   } 
+
+  .inner_box { 
+  margin:auto;
+     position: relative; 
+     width: 80%; 
+     background-color: lightgrey; 
+     color:white;
+     border: solid 3px #9e70ba; 
+     /* text-align: center;  */
+  }
+  .left_fill {
+    float:left;
+    width:10%;
+  }
+  .left {
+     float:left;
+     width:30%;
+     text-align: left; 
+  }
+  .center {
+    float:left;
+    width:20%;
+    overflow:hidden;
+  }
+
+  .right {
+     float:left;
+     width:30%;
+     text-align: left; 
+  }
+  .right_fill {
+    float:left;
+     width:10%;
+     display:none;
+  }
+
+  .left,.right h2 {
+    text-align: center; 
+  }
+
+  h1 {
+     clear:left; /*address interaction with float:left */
+  }
+  .social_icons {
+    /* margin: auto; True Center */
+    margin: 0 0 0 28%; /* Skewed center */
+    width:30%;
+    text-align: center; /* children will be centered */
+    /* border: 3px solid green; */
+  }
+
+  .social_icon {
+    margin:0px 10px 0px 10px;
+  }
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+  /* @media only screen and (max-device-width: 800px) { */
+  @media only screen and (max-width:800px) {
+
+    .parallax {
+        background-attachment: scroll;
+    }
+    .left, .center,.right {
+	    float: none;
+	    width:100%;
+            border: solid 3px black; 
+    }
+    .box_with_float{
+      height:1500px;            
+      border: solid 3px yellow; 
+
+    }
+  }
+</style>
+</head>
+<body>
+    <span id="fixed_header">
+       <span class="name">
+            Scott Larribeau
+       </span>
+       <span class="menu">
+            <a href="#intro">Intro</a>
+            <a href="#profile">Profile</a>
+            <a href="#projects">Projects</a>
+            <a href="#articles">Articles</a>
+            <a href="#books">Books</a>
+            <a href="#contact">Contact</a>
+       </span>
+       <div style="clear:both"></div>
+      </span>
+    <div class="parallax"></div>
+    <div id="intro">
+        <h1>Scott Larribeau</h1>
+        <p style="font-size:32px">Software Portfolio</p>
+    </div>
+    <div id="profile" class="box_with_float">
+        <h1>Profile</h1>
+        <h2>By Day:Scrum Master -- By Night:Developer</h2>
+        <!-- prevent div collapse with nbsp-->
+        <div class="left_fill">&nbsp;</div>
+        <div class="left">
+            <h2>About Me</h2> 
+            My daytime job is Agile Scrum Master. After work, I like to build sites to learn new software techniques (React, Angular 6, Django). I built this website to have a place to store all of these projects.
+        </div>
+
+        <div class="center">
+            center
+            <img src="me.png" style="width:100%;border-radius:50%" alt="head shot">
+        </div>
+
+        <div class="right">
+            <h2>Details</h2> 
+            Name: Scott Larribeau
+            <br>
+            Location: SF/Bay Area
+            <br>
+            <a href="https://linkedin.com/in/scottlarribeau" target="_blank">LinkedIn Profile</a>
+            <br>
+            <a href="/ScottLarribeauResume.pdf" target="_blank">Resume</a>
+            <br>
+            Employer: <a href="https://www.solutionsATI.com" target="_blank">SolutionsATI</a>
+            <br>
+            Twitter: @slarribeau
+        </div>
+        <div class="right_fill">r</div>
+        <div style="clear:both"> 
+     </div>
+    </div>
+    <div id="projects" class="box">
+        <h1>Projects</h1>
+        <div class="inner_box">
+        <h2>Angular 6</h2>
+        I am a big baseball fan and did not like the way that existing sites presented the standings. I wanted to also learn Angular Js, so I wrote my first version of this site in 2015 using Angular JS. Fast forward to 2018 - Angular 6 is now the latest version. Here is a <a href="/angular" target="_blank">link </a> to my baseball standings stie written in Angular 6.
+        </div>
+        <div class="inner_box">
+        <h2>React</h2>
+        Every front-end devolper I know is either using React or plans to start using it. I had to see what all the excitement was about. Here is a <a href="/react/baseball/build" target="_blank">link</a> to my baseball standings site written in React. 
+        </div>
+        <div class="inner_box">
+        <h2>Django/Google Maps</h2>
+        I worked at Civic Resource Group back in 2015. They were focused on public transportation and the technology for improving the experience. Many cities have open APIs that let you query bus routes and schedules. <a href="http://http://gtfs.bigbluebus.com/" target="_blank">Santa Monica's transit site</a> is a great example. I used it to build this <a href="http://54.219.125.204/" target="_blank"> site</a>, which displays every bus stop in Santa Monica overlaid on a Google Map. Clicking on each stop shows you when the next bus will arrive.
+        </div>
+    </div>
+    <div id="articles" class="box">
+        <h1>Articles</h1>
+        <h2>Stay Tuned...</h2>
+    </div>
+
+    <div id="books" class="box">
+        <h1>Favorite Books</h1>
+        <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=scottlarribea-20&marketplace=amazon&region=US&placement=0307887898&asins=0307887898&linkId=37107289bd7a836f413de53ad5deb5af&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+            </iframe>
+        <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=scottlarribea-20&marketplace=amazon&region=US&placement=0976339609&asins=0976339609&linkId=0090a4694a254d0df4e6828aadc9de6c&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+        </iframe>
+        <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=scottlarribea-20&marketplace=amazon&region=US&placement=0062292986&asins=0062292986&linkId=a09b4c9bf7ca202becc1d09850e9778e&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+          </iframe>
+          <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=scottlarribea-20&marketplace=amazon&region=US&placement=0062060244&asins=0062060244&linkId=d2cb1dfecb80631a097e20a441aee239&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+          </iframe>
+          <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=scottlarribea-20&marketplace=amazon&region=US&placement=0884271951&asins=0884271951&linkId=55a2fd87e4cd446bccf584e325afe2fa&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+          </iframe>
+          <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=scottlarribea-20&marketplace=amazon&region=US&placement=1942788290&asins=1942788290&linkId=5cd8092fa56b9f51d3829f49fe8cd688&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+          </iframe>
+          <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=scottlarribea-20&marketplace=amazon&region=US&placement=0470620749&asins=0470620749&linkId=baede12f9e4052195e647d12d765961d&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+          </iframe>
+          <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=scottlarribea-20&marketplace=amazon&region=US&placement=0596005652&asins=0596005652&linkId=006089b9b813ce73dcd1a08bc78ad6e1&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+          </iframe>
+          <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=scottlarribea-20&marketplace=amazon&region=US&placement=0312421273&asins=0312421273&linkId=2ea61c86a2dc6ce4666dddfd26f135e0&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+        </iframe>
+   </div>
+   <div id="contact" class="box">
+     <h1>My Contact Info</h1>
+     <div className="social_icons">
+        <a href="mailto:slarribeau@gmail.com" target="_blank">
+            <img class="social_icon" src=iconmonstr-email-10-32.png alt="Follow me on facebook"></img>
+        </a>
+
+        <a href="https://www.twitter.com/slarribeau" target="_blank">
+            <img class="social_icon" src=iconmonstr-twitter-4-32.png alt="Follow me on twitter"></img>
+        </a>
+
+        <a href="https://www.linkedin.com/in/scottlarribeau" target="_blank">
+            <img class="social_icon" src=iconmonstr-linkedin-4-32.png alt="Follow me on instagram"></img>
+        </a>
+
+        <a href="https://www.instagram.com/slarribeau463" target="_blank">
+            <img class="social_icon" src=iconmonstr-instagram-2-32.png alt="Follow me on linked-in"></img>
+        </a>     
+        </div>      
+    </div>
+   </div>
+</body>
+</html>
