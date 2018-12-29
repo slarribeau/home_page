@@ -104,6 +104,7 @@
   .fill {
     float:left;
     width:7%;
+    border: solid 1px yellow;
   }
 
   .left {
@@ -145,15 +146,26 @@
     .parallax {
         background-attachment: scroll;
     }
-    .left, .center,.right {
+    .center {
+      float: none;
+	    width:40%;
+      border: solid 3px red; 
+    }
+    .left, .right {
 	    float: none;
 	    width:100%;
             border: solid 3px black; 
     }
+    .fill {
+      float:left;
+      width:30%;
+    }
     .box_with_float{
       height:1500px;            
       border: solid 3px yellow; 
-
+    }
+    .right {
+      text-align:center;
     }
   }
 </style>
@@ -190,7 +202,7 @@
             </div>
         <div class="fill">&nbsp;</div>
         <div class="center">
-            <img src="me.png" style="width:100%;border-radius:50%" alt="head shot">
+            <img src="me.png"  style="width:100%;border-radius:50%" alt="head shot">
         </div>
         <div class="fill">&nbsp;</div>
 
