@@ -1,30 +1,13 @@
 <!DOCTYPE html>
 <html>
-    <!-- Props to Pascal: http://www.pascalvangemert.nl/-->
 <head>
+  <!-- Props to Pascal: http://www.pascalvangemert.nl/-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
    body {
      font-family: Helvetica;
      background-color: grey; 
      color:white;
-     /* font-size: 13px; */
-   }
-
-   h1 {
-      font-size: 48px; 
-   }
-
-   h2 {
-      font-size: 32px; 
-   }
-
-   p, strong {
-    font-size: 18px; 
-   }
-
-   p {
-     font-weight:lighter
    }
    .parallax {
      /* The image used */
@@ -75,7 +58,7 @@
   }
   #intro { 
      height: 200px; 
-     /* font-size: 24px; */
+     font-size: 24px; 
      text-align: center; 
      z-index:0;
    } 
@@ -83,14 +66,14 @@
      position: relative; 
      width: 100%; 
      height: 700px;  
-     /* font-size: 24px; */
+     font-size: 24px; 
      text-align: center; 
      z-index:0;
    } 
   .box { 
      position: relative; 
      width: 100%; 
-     /* font-size: 24px; */
+     font-size: 24px; 
      text-align: center; 
      z-index:0;
      border: solid 1px black;
@@ -110,7 +93,6 @@
      float:left;
      width:26%;
      text-align: left; 
-     border:solid 1px red;
   }
   .center {
     float:left;
@@ -122,11 +104,10 @@
      float:left;
      width:26%;
      text-align: left; 
-     border:solid 1px red;
   }
 
 
-  .left h2, .right h2 {
+  .left,.right h2 {
     text-align: center; 
   }
 
@@ -164,11 +145,11 @@
             Scott Larribeau
        </span>
        <span class="menu">
+            <a href="#intro">Intro</a>
             <a href="#profile">Profile</a>
             <a href="#projects">Projects</a>
             <a href="#articles">Articles</a>
             <a href="#books">Books</a>
-            <a href="#resume">Resume</a>
             <a href="#contact">Contact</a>
        </span>
        <div style="clear:both"></div>
@@ -176,7 +157,7 @@
     <div class="parallax"></div>
     <div id="intro">
         <h1>Scott Larribeau</h1>
-        <h2>Software Portfolio</h2>
+        <p style="font-size:32px">Software Portfolio</p>
     </div>
     <div id="profile" class="box_with_float">
         <h1>Profile</h1>
@@ -185,24 +166,29 @@
         <div class="fill">&nbsp;</div>
         <div class="left">
             <h2>About Me</h2> 
-            <p>My daytime job is Agile Scrum Master. After work, I like to build sites to learn new software techniques (React, Angular 6, Django). I built this website to have a place to store all of these projects.
-            </p>
-            </div>
+            My daytime job is Agile Scrum Master. After work, I like to build sites to learn new software techniques (React, Angular 6, Django). I built this website to have a place to store all of these projects.
+        </div>
         <div class="fill">&nbsp;</div>
         <div class="center">
+            center
             <img src="me.png" style="width:100%;border-radius:50%" alt="head shot">
         </div>
         <div class="fill">&nbsp;</div>
 
         <div class="right">
             <h2>Details</h2> 
-            <strong>Name: </strong>
-            <p>Scott Larribeau</p>
-            <strong>Location:</strong>
-            <p>SF/Bay Area</p>
-            <strong>Employer:</strong>
-            <p><a href="https://www.solutionsATI.com" target="_blank">SolutionsATI</a></p>
-          </div>
+            Name: Scott Larribeau
+            <br>
+            Location: SF/Bay Area
+            <br>
+            <a href="https://linkedin.com/in/scottlarribeau" target="_blank">LinkedIn Profile</a>
+            <br>
+            <a href="/ScottLarribeauResume.pdf" target="_blank">Resume</a>
+            <br>
+            Employer: <a href="https://www.solutionsATI.com" target="_blank">SolutionsATI</a>
+            <br>
+            Twitter: @slarribeau
+        </div>
         <!-- prevent div collapse with nbsp-->
         <div class="fill">&nbsp;</div>
         <!-- prevent float chaos-->
@@ -249,10 +235,6 @@
           </iframe>
           <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=scottlarribea-20&marketplace=amazon&region=US&placement=0312421273&asins=0312421273&linkId=2ea61c86a2dc6ce4666dddfd26f135e0&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
         </iframe>
-   </div>
-   <div id="resume" class="box">
-     <h1>Resume</h1>
-     <a href="/ScottLarribeauResume.pdf" target="_blank">View Resume</a>
    </div>
    <div id="contact" class="box">
      <h1>My Contact Info</h1>
