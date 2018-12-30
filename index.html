@@ -11,6 +11,19 @@
     box-sizing: border-box;
   }
 
+  #profile, 
+  #articles, 
+  #resume {
+    background-color: grey; 
+  }
+
+  #projects,
+  #books,
+  #contact {
+    background-color: rgb(44, 43, 43); 
+    background-color: grey; 
+  }
+
   h1 {
     font-family:'Open Sans',sans-serif;
     font-weight:300;
@@ -30,6 +43,7 @@
   p {
     font-weight:lighter
   }
+
   .parallax {
     background-image: url("abstract-business-code-270348.jpg");
     min-height: 700px; 
@@ -88,6 +102,7 @@
     width: 100%; 
     text-align: center; 
     z-index:0;
+    border-top:1px solid black;
   } 
 
   .inner_box { 
@@ -155,7 +170,7 @@
     }
   }
 
-  .child { 
+  .title { 
     position: relative; 
     top: 100px; 
     width: 40%; 
@@ -186,14 +201,14 @@
     </span>
 
     <div class="parallax">
-        <div class="child">
+        <div class="title">
           <h1>Scott Larribeau</h1>
           <h2>Software Portfolio</h2>
         </div>
     </div>
     <div id="profile" class="box">
         <h1>Profile</h1>
-        <h2>Agile Scrum Master With Coding Skills</h2>
+        <h2>Agile Scrum Master ++ Coding Skills</h2>
         <h2></h2>
         <!-- prevent div collapse with nbsp-->
         <div class="fill">&nbsp;</div>
