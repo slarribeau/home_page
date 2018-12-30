@@ -8,9 +8,12 @@
      font-family: Helvetica;
      background-color: grey; 
      color:white;
+     box-sizing: border-box;
      /* font-size: 13px; */
    }
-
+  div {
+    display:block;
+  }
    h1 {
       font-size: 48px; 
    }
@@ -131,6 +134,7 @@
 
   .social_icon {
     margin:0px 10px 0px 10px;
+    z-index:100;
   }
 
   /* @media only screen and (max-device-width: 800px) { */
@@ -157,6 +161,23 @@
       text-align:center;
     }
   }
+
+  .child { 
+  display:table;
+  position: relative; 
+  top: 100px; 
+  width: 200px; 
+  height: 200px; 
+  background-color: darkgrey; 
+  border: solid 3px #78e382; 
+  font-size: 24px; 
+  text-align: center; 
+  z-index:100; 
+  padding: 40px 180px;
+  margin-left: auto;
+  margin-right:auto;
+}
+
 </style>
 </head>
 <body>
@@ -173,8 +194,11 @@
             <a href="#contact">Contact</a>
        </span>
        <div style="clear:both"></div>
-      </span>
-    <div class="parallax"></div>
+    </span>
+
+    <div class="parallax">
+        <div class="child">pppppppp</div>
+    </div>
     <div id="intro">
         <h1>Scott Larribeau</h1>
         <h2>Software Portfolio</h2>
