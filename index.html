@@ -40,11 +40,11 @@
   font-size: 18px; 
   }
 
-  p {
-    font-weight:lighter
+  .parallax {
+      position: relative;
   }
 
-  .parallax {
+  .parallax::before {
     background-image: url("abstract-business-code-270348.jpg");
     min-height: 700px; 
     background-attachment: fixed;
@@ -52,6 +52,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     z-index:0; 
+    filter: blur(12px);
+    -webkit-filter: blur(12px); 
   }
 
   #fixed_header { 
@@ -177,10 +179,15 @@
     height: 200px; 
     font-size: 24px; 
     text-align: center; 
-    z-index:0; 
+    z-index:1; 
     padding: 20px 40px;
     margin-left: auto;
     margin-right:auto;
+    border:solid 1px black;
+    /* background:rgba(255,255,255,0.5); */
+    background:rgba(255,255,255,0.1); 
+    background:grey;
+    filter:none;
   }
 </style>
 </head>
