@@ -142,12 +142,20 @@
   .fill {
     float:left;
     width:7%;
+    border:solid 1px yellow;
+  }
+
+  .fill_center {
+    float:left;
+    width:7%;
+    border:solid 1px red;
   }
 
   .left {
     float:left;
     width:26%;
     text-align: left; 
+    border:solid 3px green;
   }
 
   .center {
@@ -191,9 +199,15 @@
     }
     .fill {
       float:left;
+      width:0%;
+    }
+    .fill_center {
       width:30%;
     }
     .right {
+      text-align:center;
+    }
+    .left h2, .right h2 {
       text-align:center;
     }
   }
@@ -236,7 +250,8 @@
     <div id="profile" class="box">
         <h1>Profile</h1>
         <h2>Agile Scrum Master ++ Coding Skills</h2>
-        <h2></h2>
+        <div style="clear:both"> </div>
+
         <!-- prevent div collapse with nbsp-->
         <div class="fill">&nbsp;</div>
             <div class="left">
@@ -246,7 +261,7 @@
                 <p>It's fun and helps me stay current.</p>
                 <p>I built this website to collect these projects in a single location.</p>
             </div>
-        <div class="fill">&nbsp;</div>
+        <div class="fill_center">&nbsp;</div>
         <div class="center">
             <img src="me.png"  style="width:100%;border-radius:50%" alt="head shot">
         </div>
@@ -323,7 +338,7 @@
    </div>
    <div id="resume" class="box">
      <h1>Resume</h1>
-     <a href="/ScottLarribeauResume.pdf" target="_blank">View Resume</a>
+     <a href="/ScottLarribeauResume.pdf" target="_blank" class="btn btn-primary">View Resume</a>
    </div>
    <div id="contact" class="box">
      <h1>Contact Info</h1>
