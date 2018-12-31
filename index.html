@@ -113,7 +113,6 @@
   .fill {
     float:left;
     width:7%;
-    border:solid 1px yellow;
   }
 
   .left {
@@ -213,7 +212,7 @@
        <!-- prevent float chaos-->
         <div style="clear:both"> 
     </div>
-    <div class="box">
+    <div class="box;border-top:none">
         <!-- prevent div collapse with nbsp-->
         <div class="fill">&nbsp;</div>
             <div class="left">
@@ -270,7 +269,7 @@
 
     <div id="articles" class="box">
         <div class="fill">&nbsp;</div>
-        <div style="float:left;border:solid 1px red">
+        <div style="float:left">
             <h1>Articles</h1>
             <h2 style="text-indent:38px">Stay Tuned...</h2>
         </div>   
@@ -309,7 +308,7 @@
       <div class="fill">&nbsp;</div>
       <div style="float:left">
           <h1>Resume</h1>
-          <a href="/ScottLarribeauResume.pdf" target="_blank">View Resume</a>
+          <a href="/ScottLarribeauResume.pdf" target="_blank" style="display:block;text-indent:38px">View Resume</a>
         </div>
         <!-- prevent float chaos-->
        <div style="clear:both"></div>
@@ -322,19 +321,19 @@
         <h1>Contact Info</h1>
         <div className="social_icons">
             <a href="mailto:slarribeau@gmail.com" target="_blank">
-                <img class="social_icon" src=iconmonstr-email-10-32.png alt="Follow me on facebook"></img>
+                <img class="social_icon" src=iconmonstr-email-10-32.png alt="Follow me on facebook" style="margin-left:38px">
             </a>
 
             <a href="https://www.twitter.com/slarribeau" target="_blank">
-                <img class="social_icon" src=iconmonstr-twitter-4-32.png alt="Follow me on twitter"></img>
+                <img class="social_icon" src=iconmonstr-twitter-4-32.png alt="Follow me on twitter">
             </a>
 
             <a href="https://www.linkedin.com/in/scottlarribeau" target="_blank">
-                <img class="social_icon" src=iconmonstr-linkedin-4-32.png alt="Follow me on instagram"></img>
+                <img class="social_icon" src=iconmonstr-linkedin-4-32.png alt="Follow me on instagram">
             </a>
 
             <a href="https://www.instagram.com/slarribeau463" target="_blank">
-                <img class="social_icon" src=iconmonstr-instagram-2-32.png alt="Follow me on linked-in"></img>
+                <img class="social_icon" src=iconmonstr-instagram-2-32.png alt="Follow me on linked-in">
             </a>     
         </div>   
         <!-- prevent float chaos-->
