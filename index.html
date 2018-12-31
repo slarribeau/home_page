@@ -3,6 +3,7 @@
     <!-- Props to Pascal: http://www.pascalvangemert.nl/-->
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 <style>
   body {
     font-family: Helvetica;
@@ -47,10 +48,30 @@
   }
 
   a {
-   color:inherit;
+   color:white;
   }
 
-
+  #profile a:link {
+    text-decoration: underline;
+  }
+  #profile a:visited {
+    text-decoration: none;
+  }
+  #profile a:hover {
+    color: hotpink;
+  }
+  /* Can CSS cascade from a class? */
+  /* If that could work, I would not need two identical ids */
+  /* Did not want bootstrap button to inherit this */
+  #special_anchor a:link {
+    text-decoration: underline;
+  }
+  #special_anchor a:visited {
+    text-decoration: none;
+  }
+  #special_anchor a:hover {
+    color: hotpink;
+  }
 
   .parallax {
     background-image: url("abstract-business-code-270348.jpg");
@@ -115,6 +136,7 @@
     margin:auto;
     position: relative; 
     width: 80%; 
+    padding:20px 20px 40px 20px;
   }
 
   .fill {
@@ -239,7 +261,6 @@
             <p><strong>Location: </strong>SF/Bay Area</p>
             <p><strong>Linked-In: </strong><a href="https://linkedin.com/in/scottlarribeau" target="_blank">https://linkedin.com/in/scottlarribeau</a></p>
         </div>
-        <!-- prevent div collapse with nbsp-->
         <!-- prevent float chaos-->
         <div style="clear:both"> 
      </div>
@@ -247,8 +268,10 @@
     <div id="projects" class="box">
         <h1>Projects</h1>
         <div class="inner_box">
-        <h2>Angular 6</h2>
-        I am a big baseball fan and did not like the way that existing sites presented the standings. I wanted to also learn Angular Js, so I wrote my first version of this site in 2015 using Angular JS. Fast forward to 2018 - Angular 6 is now the latest version. Here is a <a href="/angular" target="_blank">link </a> to my baseball standings stie written in Angular 6.
+            <h2>Angular 6</h2>
+            <p>I am a big baseball fan and did not like the way that existing sites presented the standings. 
+               I also wanted to see how Angular 6 had evolved from AngularJS, so I wrote my own baseball standings website using Angular 6. </p>
+            <a href="/angular" target="_blank" class="btn btn-primary">Try me!</a>
         </div>
         <div class="inner_box">
         <h2>React</h2>
@@ -256,7 +279,12 @@
         </div>
         <div class="inner_box">
         <h2>Django/Google Maps</h2>
-        I worked at Civic Resource Group back in 2015. They were focused on public transportation and the technology for improving the experience. Many cities have open APIs that let you query bus routes and schedules. <a href="http://http://gtfs.bigbluebus.com/" target="_blank">Santa Monica's transit site</a> is a great example. I used it to build this <a href="http://54.219.125.204/" target="_blank"> site</a>, which displays every bus stop in Santa Monica overlaid on a Google Map. Clicking on each stop shows you when the next bus will arrive.
+        <p id="special_anchor">I worked at Civic Resource Group back in 2015. They were focused on public 
+          transportation and the technology for improving the experience. Many cities 
+          have open APIs that let you query bus routes and schedules. 
+          <a href="http://gtfs.bigbluebus.com/" target="_blank" style="hover">Santa Monica's transit site</a> 
+          is a great example. I used it to build this <a href="http://54.219.125.204/" target="_blank"> site</a>, which displays every bus stop in Santa Monica overlaid on a Google Map. Clicking on each stop shows you when the next bus will arrive.
+        </p>
         </div>
     </div>
     <div id="articles" class="box">
