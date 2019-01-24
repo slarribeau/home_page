@@ -75,7 +75,7 @@
     color: hotpink;
   }
 
-  .parallax {
+  #parallax {
     background-image: url("abstract-business-code-270348.jpg");
     min-height: 700px; 
     background-attachment: fixed;
@@ -186,7 +186,7 @@
 
   /* @media only screen and (max-device-width: 800px) { */
   @media only screen and (max-width:800px) {
-    .parallax {
+    #parallax {
         background-attachment: scroll;
     }
     .center {
@@ -232,6 +232,18 @@
     margin-right:auto;
   }
 </style>
+<script type="text/javascript">
+  function URLopenDifferntOnMobile(url) {
+    var elem = document.getElementById("parallax");
+    var theCSSprop = window.getComputedStyle(elem, "").getPropertyValue("background-attachment");
+    if (theCSSprop == 'fixed') {
+      window.open(url, '_blank');
+    } else {
+      //On mobile background-attachment is set to 'scroll'
+      window.open(url, '_self');
+    }
+  };
+  </script>  
 </head>
 <body>
     <span id="fixed_header">
@@ -249,7 +261,7 @@
        <div style="clear:both"></div>
     </span>
 
-    <div class="parallax"></div>
+    <div id="parallax"></div>
     <div class="title">
       <h1>Scott Larribeau</h1>
       <h2>Software Portfolio</h2>
@@ -295,14 +307,15 @@
             <h2>Angular 6</h2>
             <p>I am a big baseball fan and did not like the way that existing sites presented the standings. 
                I also wanted to see how Angular 6 had evolved from AngularJS, so I wrote my own baseball standings website using Angular 6. </p>
-            <a href="/angular" target="_blank" class="btn btn-primary">Goto site!</a>
+            <button class="btn btn-primary" onclick="URLopenDifferntOnMobile('/angular')">Goto site!</button>
         </div>
         <div class="inner_box">
             <h2>React</h2>
             <p>Every front-end devolper I know is either using React or plans to start using it. 
               I had to see what all the excitement was about. I did a port of my Angular 6 baseball site to 
               React. </p>
-            <a href="/react/baseball/build/" target="_blank" class="btn btn-primary">Goto site!</a>
+            <button class="btn btn-primary" onclick="URLopenDifferntOnMobile('/react/baseball/build/')">Goto site!</button>
+
         </div>
         <div class="inner_box">
             <h2>Django/Google Maps</h2>
@@ -315,18 +328,20 @@
               which displays every bus stop in Santa Monica overlaid on a Google Map. 
               Clicking on each stop shows you when the next bus will arrive.
             </p>
-            <a href="http://54.219.125.204/" target="_blank" class="btn btn-primary">Goto site!</a>
+            <button class="btn btn-primary" onclick="URLopenDifferntOnMobile('http://54.219.125.204/')">Goto site!</button>
+
         </div>
     </div>
     <div id="resume" class="box">
       <h1>Resume</h1>
-      <a href="/ScottLarribeauResume.pdf" target="_blank" class="btn btn-primary">View Resume</a>
+      <button class="btn btn-primary" onclick="URLopenDifferntOnMobile('/ScottLarribeauResume.pdf')">View Resume</button>
+
     </div>
     <div id="articles" class="box">
         <h1>Articles</h1>
         <h2>Angular and React</h2>
         <p>Medium post on the differences between Angular and React discovered when doing a port of baseball standings site.</p>
-        <h2><a href="https://medium.com/@slarribeau/angular-and-react-7004d2484d4d" class="btn btn-primary" target="_blank">Read Article</a></h2>
+        <button class="btn btn-primary" onclick="URLopenDifferntOnMobile('https://medium.com/@slarribeau/angular-and-react-7004d2484d4d')">Read Article</button>
     </div>
 
     <div id="books" class="box">
